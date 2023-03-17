@@ -1,0 +1,35 @@
+html, body {
+  background-color: #EEF2FF;
+  font-family: arial, sans-serif;
+}
+
+hr {
+	width: 90%;
+	border: 0 none;
+}
+
+.header {
+	font-size: 25pt;
+	font-family: arial, sans-serif;
+	color: #AF0A0F;
+	text-align: center;
+}
+
+.postform table {
+	margin: 0 auto;
+	text-align: left;
+}
+
+.postform table th {
+	background: #98E;
+}
+
+.oppost img {
+	float: left;
+	margin: 5px 20px 10px 20px;
+}
+
+.oppost form {
+	float: left;
+	margin: 5px 5px;
+}
