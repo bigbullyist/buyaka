@@ -3,6 +3,7 @@
     <head>
         <title>Random</title>
 		<link rel="stylesheet" href="../files/css/burichan.css">
+
     </head>
 <body>
     <div class="adminbar">
@@ -10,7 +11,7 @@
     </div>
         <hr>
     <div class="header">
-        Random
+        <span>Random</span>
     </div>
         <hr>
     <div class="postform">
@@ -53,7 +54,19 @@
 			$resultThreads = mysqli_query($db, "SELECT * FROM posts_b");
 			
 			while($row = mysqli_fetch_array($resultThreads)) {
-				echo '<div class="oppost"> <br> File: ' . $row["file"] . '<br> <img src="src/' . $row["file"] . '" width="200px" height="200px"> <form action="post.php"> <input type="checkbox" id="postaction" name="postaction"> </form> ' . $row["subject"] . ' ' . $row["name"] . ' ' . $row["date"] . ' No. ' . $row["id"] . ' <p> ' . $row["message"] . ' </p> <hr> </div>';
+				echo '<div class="oppost"> <br> 
+					<span class="filename"> >>> File: ' . $row["file"] . ' <em> (<a href="src/' . $row["file"] . '" target="_blank">Click here to view the file in full size</a>) </em> </span> <br> 
+					<img src="src/' . $row["file"] . '" width="200px" height="200px">
+					<form action="post.php"> <input type="checkbox" id="postaction" name="postaction"> </form> 
+						<div class="opintro"> 
+							<span class="subject">' . $row["subject"] . '</span> 
+							<span class="name">' . $row["name"] . '</span>
+							<span class="date">' . $row["date"] . '</span> 
+							<span class="postno"> No. ' . $row["id"] . '</span> 
+						</div> 
+						<p> ' . $row["message"] . ' </p> 
+						<hr> 
+				</div>';			
 			}
 			
         ?>
@@ -79,7 +92,7 @@
     </div>
         <hr>
     <div class="footer">
-        - Powered by Buyaka 0.0.0 -
+        - Powered by <a href="https://github.com/bigbullyist/buyaka">Buyaka 0.0.0 -</a>
     </div>
 </body>
 </html>

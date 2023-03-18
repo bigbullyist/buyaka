@@ -1,6 +1,7 @@
 html, body {
-  background-color: #EEF2FF;
-  font-family: arial, sans-serif;
+	background-color: #EEF2FF;
+	font-family: georgia, trebuchet, serif;
+	font-size: 14px;
 }
 
 hr {
@@ -8,9 +9,14 @@ hr {
 	border: 0 none;
 }
 
+a {
+	color: #34345C;
+	text-decoration: none;
+}
+
 .header {
 	font-size: 25pt;
-	font-family: arial, sans-serif;
+	font-family: georgia, trebuchet, serif;
 	color: #AF0A0F;
 	text-align: center;
 }
@@ -32,4 +38,27 @@ hr {
 .oppost form {
 	float: left;
 	margin: 5px 5px;
+}
+
+.filename em {
+	font-size: 10px;
+}
+
+.subject {
+	color: #0F0C5D;
+	font-weight: 800;
+}
+
+.name {
+	color: green;
+	font-weight: bold;
+}
+
+.oppost p {
+	margin-left: 7em;
+	padding-left: 12em;
+}
+
+.footer {
+	text-align: center;
 }
